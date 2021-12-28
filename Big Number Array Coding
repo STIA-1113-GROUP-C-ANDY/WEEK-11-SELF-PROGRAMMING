@@ -1,0 +1,36 @@
+package selfProgramming;
+import java.util.Scanner;
+
+public class BigNumberArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Scanner sc = new Scanner(System.in);
+	        System.out.println("Enter how many array element");
+	        int n=sc.nextInt();
+	        int[] ar= new int[n];
+	        System.out.println("enter "+n+" values");
+	        for(int i=0;i<ar.length;i++){
+	            ar[i]=sc.nextInt();
+	        }
+	        int fbig=ar[0];
+	        int sbig=ar[1];
+	        int tbig=ar[3];
+	            for(int i=1;i<ar.length;i++){
+	                if(fbig<ar[i]){
+	                    sbig=fbig;
+	                    fbig=ar[i];
+	                }
+	                else if(sbig<ar[i]&&ar[i]!=fbig){
+	                    sbig=ar[i];
+	                }
+	                else if(tbig<ar[i]&&ar[i]!=fbig){
+	                    tbig=ar[i];
+	                }
+	            }
+	        System.out.println("first big number is "+fbig);
+	        System.out.println("second big number is "+sbig);
+	        System.out.println("third big number is "+tbig);
+	}
+
+}
