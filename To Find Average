@@ -1,0 +1,25 @@
+package selfProgramming;
+
+public class ToFindAverage {
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		  double total;
+	        double average;
+	        int i;
+	        int[] list;
+	        list = new int[4];  //make container for 4
+	        list[0] = 1;
+	        list[1] = 2;
+	        list[2] = 3;
+	        list[3] = 4;
+	        total = 0;
+	        for (i = 0; i < list.length; i++) {
+	            total = total + list[i];
+	        }
+	        average = total / list.length;
+	        System.out.println("The total average is " + average);
+	}
+
+}
